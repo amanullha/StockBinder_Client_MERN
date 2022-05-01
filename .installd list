@@ -1,0 +1,17 @@
+1.  npm install react-router-dom@6 
+2.  npm install axois
+3.  npm install firebase
+4.  npm install --save react-firebase-hooks
+5.  npm i react-fontawesome
+6.  npm install react-hook-form
+7.  npm install -D tailwindcss postcss autoprefixer
+8.  npx tailwindcss init -p
+9.  npm i styled-components
+10.  npm install react-icons
+11.  npm i --save @fortawesome/fontawesome-svg-core
+
+12.  npm i --save @fortawesome/free-solid-svg-icons
+13.  npm i --save @fortawesome/free-regular-svg-icons
+14.  npm i react-toastify
+15.  
+
