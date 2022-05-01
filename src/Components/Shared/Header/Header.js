@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faUser, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../.firebase.init';
@@ -23,6 +23,7 @@ const Header = () => {
     const handleSingOut = () => {
         signOut(auth);
     }
+
 
     let location = useLocation();
 
@@ -63,7 +64,15 @@ const Header = () => {
                         }
 
                         {
-                            user?.uid ? <img src="" alt="" srcset="" /> : ""
+                            user?.uid ?
+
+                                <>
+                                    {
+                                        user?.photoURL ? <img title={user.displayName} width={40} className='cursor-pointer' style={{ borderRadius: '50%' }} src={user.photoURL} alt="" srcset="" /> : <FontAwesomeIcon style={{ borderRadius: '50%' }} className='bg-slate-600 p-3' icon={faUser} />
+                                    }
+                                </>
+                                :
+                                ""
                         }
 
 
