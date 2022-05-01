@@ -28,7 +28,7 @@ const Header = () => {
     let location = useLocation();
 
     return (
-        <div>
+        <div className='sticky top-0'>
 
             <div className='bg-black relative'>
 

@@ -10,8 +10,8 @@ import Footer from './Components/Shared/Footer/Footer';
 
 function App() {
   return (
-    <div>
-      <Header></Header>
+    <div className='relative'>
+      <Header ></Header>
 
       <Routes>
 
