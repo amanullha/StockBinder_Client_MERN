@@ -8,7 +8,7 @@ const AdvancedFeatures = () => {
 
             <section className=" flex flex-col justify-center items-center py-20">
                 <header>
-                    <h1 className='text-3xl text-center font-bold'>Advanced features made simple</h1>
+                    <h1 className='text-3xl md:text-6xl text-center font-bold mb-12'>Advanced features made simple</h1>
                     <h1 className='text-xl text-center mt-3 mb-12'>Use cutting-edge automation and advanced routes to manage any warehouse.
                     </h1>
                 </header>
