@@ -13,5 +13,6 @@
 12.  npm i --save @fortawesome/free-solid-svg-icons
 13.  npm i --save @fortawesome/free-regular-svg-icons
 14.  npm i react-toastify
-15.  
+15.  npm install --save react-toastify
+
 

@@ -28,7 +28,7 @@ const Header = () => {
     let location = useLocation();
 
     return (
-        <div className='sticky top-0'>
+        <div className='sticky top-0 z-50'>
 
             <div className='bg-black relative'>
 
@@ -45,10 +45,29 @@ const Header = () => {
 
                     gap-3  items-center  tracking-widest font-bold text-white` : `
                     hidden lg:flex gap-3  items-center  tracking-widest font-bold text-white`}`}  >
+
+
+
                         <Link className={`  ${location.pathname === "/home" ? `text-yellow-500` : `text-white`}`} to='/home'>HOME</Link>
+
+                        <Link className={`  ${location.pathname === "/inventory" ? `text-yellow-500` : `text-white`}`} to='/inventory'>INVENTORY</Link>
+
+
+{/* 
+                        <Link className={`  ${location.pathname === "/manage-items" ? `text-yellow-500` : `text-white`}`} to='/manage-items'>MANAGE ITEMS</Link>
+                         */}
+
+                         
+                        <Link className={`  ${location.pathname === "/my-items" ? `text-yellow-500` : `text-white`}`} to='/my-items'>MY ITEMS</Link>
+                        <Link className={`  ${location.pathname === "/add-items" ? `text-yellow-500` : `text-white`}`} to='/add-items'>ADD ITEMS</Link>
+
+
+
+
+
+
+
                         <Link className={`  ${location.pathname === "/about" ? `text-yellow-500` : `text-white`}`} to='/about'>ABOUT</Link>
-
-
 
                         {
                             user?.uid ?
