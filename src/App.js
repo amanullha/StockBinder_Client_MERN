@@ -9,6 +9,7 @@ import Footer from './Components/Shared/Footer/Footer';
 import Home from './Components/Pages/Home/Home/Home';
 import ManageItem from './Components/Pages/Home/ManageItem/ManageItem';
 import AddItems from './Components/Pages/Home/AddItems/AddItems';
+import ManageInventory from './Components/Pages/ManageInventory/ManageInventory';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
 
         <Route path="/manage-item/:_id" element={<ManageItem />} />
         <Route path="/add-items" element={<AddItems />} />
+        <Route path="/inventory" element={<ManageInventory />} />
 
 
 

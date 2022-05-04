@@ -9,7 +9,8 @@ import Spreadsheets from '../Spreadsheets/Spreadsheets';
 const Home = () => {
     return (
         <div>
-            <Phones />
+            <Phones
+                fromCall="home" />
             <InventoryUsesPrice />
             <Spreadsheets />
             <AdvancedFeatures />

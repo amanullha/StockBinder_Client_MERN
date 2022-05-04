@@ -14,6 +14,8 @@ const ManageItem = () => {
     const neqQuantityRef = useRef(0);
     const [user, loading, error] = useAuthState(auth);
 
+    const navigate = useNavigate();
+
 
     useEffect(() => {
 
@@ -41,7 +43,7 @@ const ManageItem = () => {
 
             const newQuantity = parseInt(neqQuantityRef.current.value) + parseInt(phone?.quantity || 0);
 
-            const updatedPhone = { quantity: newQuantity };
+            const updatedPhone = { quantity: newQuantity, soldItems: phone.soldItems };
 
             fetch(`http://localhost:5000/phones/${_id}`, {
                 method: 'PUT',
@@ -73,8 +75,11 @@ const ManageItem = () => {
         if (phone.quantity > 0) {
 
             const newQuantity = parseInt(phone.quantity) - 1;
+            console.log("phone.soldItems  :", phone.soldItems);
+            const newSold = parseInt(phone.soldItems || 0) + 1;
+            console.log("new sold: ", newSold);
 
-            const updatedPhone = { quantity: newQuantity };
+            const updatedPhone = { quantity: newQuantity, soldItems: newSold };
 
             fetch(`http://localhost:5000/phones/${_id}`, {
                 method: 'PUT',
@@ -88,7 +93,9 @@ const ManageItem = () => {
                     if (res.acknowledged) {
 
                         const newPhone = phone;
-                        newPhone.quantity = newQuantity;
+                        newPhone.quantity = newPhone.quantity - 1;
+                        newPhone.soldItems = newPhone.soldItems + 1;
+
                         setPhone(newPhone);
 
                         toast("Derived an Item!");
@@ -99,11 +106,14 @@ const ManageItem = () => {
         }
     }
 
-    const navigate = useNavigate();
+
+
     const handleAddNewItems = () => {
         navigate('/add-items');
     }
-
+    const handleToMangeInventory = () => {
+        navigate('/inventory');
+    }
 
     return (
         <div className='min-h-[100vh] bg-slate-200 pt-20'>
@@ -137,7 +147,24 @@ const ManageItem = () => {
 
                             <h1 className='text-gray-700 '>{phone.description}</h1>
 
+
                             <div className=' my-5 flex items-center justify-start'>
+
+                                <div className='flex flex-col items-center gap-5 mr-5 '>
+
+                                    <div className='flex gap-4 items-center'>
+                                        <h1 className='text-xl'>Total sold items : </h1>
+                                        <h1 className='text-2xl font-bold text-yellow-800'>{phone?.soldItems ? phone.soldItems : "None sold"}</h1>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                            <div className=' my-5 flex items-center justify-start'>
+
+
 
                                 <div className='flex flex-col items-center gap-5 mr-5 '>
 
@@ -146,7 +173,7 @@ const ManageItem = () => {
                                         <h1 className='text-2xl font-bold text-yellow-800'>{phone?.quantity ? phone.quantity : "OUT OF STOCK"}</h1>
                                     </div>
 
-                                    <button onClick={handleDerived} className='active:bg-red-400 active:text-red-900 px-4 py-1 tracking-wider bg-blue-700 text-white font-bold rounded-2xl' >Derived</button>
+                                    <button onClick={handleDerived} className='active:bg-red-400 active:text-red-900 px-4 py-1 tracking-wider bg-blue-700 text-white font-bold rounded-2xl' >Delivered</button>
 
 
                                 </div>
@@ -164,8 +191,10 @@ const ManageItem = () => {
                     </div>
 
                 </div>
-                <div className='flex justify-center py-20'>
+                <div className='flex gap-5 justify-center py-20'>
+
                     <button onClick={handleAddNewItems} className='px-5 py-1 bg-gray-400 text-blue-800 font-bold rounded-2xl '>Add new Items</button>
+                    <button onClick={handleToMangeInventory} className='px-5 py-1 bg-gray-400 text-blue-800 font-bold rounded-2xl '>Manage Inventory</button>
                 </div>
             </div >
             <ToastContainer />

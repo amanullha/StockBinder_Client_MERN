@@ -53,13 +53,17 @@ const Header = () => {
                         <Link className={`  ${location.pathname === "/inventory" ? `text-yellow-500` : `text-white`}`} to='/inventory'>INVENTORY</Link>
 
 
-{/* 
+                        {/* 
                         <Link className={`  ${location.pathname === "/manage-items" ? `text-yellow-500` : `text-white`}`} to='/manage-items'>MANAGE ITEMS</Link>
                          */}
 
-                         
-                        <Link className={`  ${location.pathname === "/my-items" ? `text-yellow-500` : `text-white`}`} to='/my-items'>MY ITEMS</Link>
-                        <Link className={`  ${location.pathname === "/add-items" ? `text-yellow-500` : `text-white`}`} to='/add-items'>ADD ITEMS</Link>
+
+                        {
+                            user?.uid ? <Link className={`  ${location.pathname === "/my-items" ? `text-yellow-500` : `text-white`}`} to='/my-items'>MY ITEMS</Link> : ""
+                        }
+                        {
+                            user?.uid ? <Link className={`  ${location.pathname === "/add-items" ? `text-yellow-500` : `text-white`}`} to='/add-items'>ADD ITEMS</Link> : ""
+                        }
 
 
 

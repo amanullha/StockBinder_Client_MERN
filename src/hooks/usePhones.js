@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-const usePhones = (startingItemPos, numberOfItems) => {
+const usePhones = (currentPageNbr, totalPhoneInPage) => {
 
     const [phones, setPhones] = useState([]);
 
