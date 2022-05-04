@@ -19,51 +19,51 @@ const ReactSlider = () => {
             <Slider {...settings} className="z-0">
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/XW9GzJ5/bagus-hernawan-k-FDVRCZWwl-A-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/HdNsdY3/adrian-sulyok-In-MD-APxay-I-unsplash.jpg" alt="" />
                 </div>
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/bsf1yjF/adrian-sulyok-In-MD-APxay-I-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/4VZywgM/bagus-hernawan-k-FDVRCZWwl-A-unsplash.jpg" alt="" />
                 </div>
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/1MWKnhm/cardmapr-l-Mc-Hm-tz-R3-I-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/3mt3Dg8/cardmapr-l-Mc-Hm-tz-R3-I-unsplash.jpg" alt="" />
                 </div>
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/T0RjxCn/gilles-lambert-pb-l-F8-VWa-PU-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/7CZcpBC/gilles-lambert-pb-l-F8-VWa-PU-unsplash.jpg" alt="" />
                 </div>
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/gWyHxz1/marcin-jozwiak-k-Go-Pcmp-PT7c-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/DY85f7h/jezael-melgoza-HYQv-V8w-WX18-unsplash.jpg" alt="" />
                 </div>
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/Yc0Wwxs/jezael-melgoza-HYQv-V8w-WX18-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/zSTvN0M/marcin-jozwiak-k-Go-Pcmp-PT7c-unsplash.jpg" alt="" />
                 </div>
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/7GkrsH1/miryam-leon-Jdpvhn6x-A0w-unsplash.jpg" alt="" />
-
-                </div>
-
-                <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/7CRV8Pk/omid-armin-DIp71kvw-Xh-U-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/WvkFLtC/miryam-leon-Jdpvhn6x-A0w-unsplash.jpg" alt="" />
 
                 </div>
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/NTXNKZr/priscilla-du-preez-Bjh-Uu6-Bp-UZA-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/SsmjfJQ/omid-armin-DIp71kvw-Xh-U-unsplash.jpg" alt="" />
 
                 </div>
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/9pbXj3K/timelab-pro-4-Xi-Fz-GNRTw-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/xqxRTrt/priscilla-du-preez-Bjh-Uu6-Bp-UZA-unsplash.jpg" alt="" />
 
                 </div>
 
                 <div>
-                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/Nrt0BPM/wesley-hilario-CNSH-JGEwt-I-unsplash.jpg" alt="" />
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/pQQpnjZ/timelab-pro-4-Xi-Fz-GNRTw-unsplash.jpg" alt="" />
+
+                </div>
+
+                <div>
+                    <img style={{ width: "100%", maxHeight: "90vh", minHeight: "40vh" }} src="https://i.ibb.co/k27VVkS/wesley-hilario-CNSH-JGEwt-I-unsplash.jpg" alt="" />
 
                 </div>
 

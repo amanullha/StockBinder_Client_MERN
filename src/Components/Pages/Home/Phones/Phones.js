@@ -111,7 +111,7 @@ const Phones = ({ fromCall }) => {
         <div className='mt-0'>
 
 
-            <div className='bg-emerald-200 py-16 rounded-md relative'>
+            <div className='bg-emerald-200 py-16 mt-0 relative'>
 
                 <h1 className='text-center text-4xl font-bold tracking-widest pb-5 text-yellow-700'>{fromCall === "manageInventory" ? "Manage Inventory(All Products)" : "Available Phones"}</h1>
 
