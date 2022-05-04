@@ -14,5 +14,6 @@
 13.  npm i --save @fortawesome/free-regular-svg-icons
 14.  npm i react-toastify
 15.  npm install --save react-toastify
+16.  npm i infinite-react-carousel
 
 

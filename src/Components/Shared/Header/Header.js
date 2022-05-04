@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faUser, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../.firebase.init';
 import { signOut } from 'firebase/auth';
@@ -27,6 +27,11 @@ const Header = () => {
 
     let location = useLocation();
 
+    const navigate = useNavigate();
+    const handleImageClicked = () => {
+        navigate('/home');
+    }
+
     return (
         <div className='sticky top-0 z-50'>
 
@@ -35,7 +40,7 @@ const Header = () => {
                 <nav className='flex items-center justify-between mx-5 lg:mx-40'>
 
                     <div>
-                        <img width={200} src="logo.png" alt="" />
+                        <img className='cursor-pointer' onClick={handleImageClicked} width={200} src="logo.png" alt="" />
                     </div>
 
                     <div className={` ${open ? `

@@ -128,12 +128,13 @@ const MyItems = () => {
                 <div className='flex items-center gap-5 justify-between m-5  p-3'>
 
 
-                    <h1 className='text-2xl font-bold text-yellow-600' >Phone</h1>
-                    <h1 className='text-2xl font-bold text-yellow-600' >Name</h1>
-                    <h1 className='text-2xl font-bold text-yellow-600' >Price</h1>
-                    <h1 className='text-2xl font-bold text-yellow-600' >Quantity</h1>
-                    <h1 className='text-2xl font-bold text-yellow-600' >Supplier</h1>
-                    <h1 className='text-2xl font-bold text-yellow-600' >Functions</h1>
+                    <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Phone</h1>
+                    <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Name</h1>
+                    <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Price</h1>
+                    <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Quantity</h1>
+                    <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Sold</h1>
+                    <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Supplier</h1>
+                    <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Functions</h1>
 
                 </div>
 

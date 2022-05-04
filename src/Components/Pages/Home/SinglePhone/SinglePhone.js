@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SinglePhone = ({ phone, handleDeletePhone }) => {
+const SinglePhone = ({ phone, handleDeletePhone, fromCall }) => {
 
     const [onenModal, setOpenModal] = useState(false);
 
 
-    const { _id, name, description, image, price, quantity, supplier } = phone;
+    const { _id, name, description, image, price, quantity, supplier, soldItems } = phone;
 
     const navigate = useNavigate();
 
@@ -39,22 +39,27 @@ const SinglePhone = ({ phone, handleDeletePhone }) => {
 
     return (
         <div className='relative'>
-            <div className='flex items-center gap-5 justify-between m-5 bg-green-100 p-3 rounded-2xl'>
+            <div className='flex items-center gap-5 justify-between m-5 bg-green-100 p-3 rounded-2xl px-5 md:px-8'>
 
                 <img className='rounded-sm' width={50} height={50} src={image} alt="" />
 
                 <h1 className='text-xl font-bold' >{name}</h1>
                 <h1 className='text-xl font-bold' >{price}</h1>
                 <h1 className='text-xl font-bold' >{quantity}</h1>
+                <h1 className='text-xl font-bold' >{soldItems}</h1>
                 <h1 className='text-xl font-bold' >{supplier}</h1>
 
-                <div className='flex items-center gap-2'>
+                {
+                    fromCall === "home" ? ""
+                        :
+                        <div className='flex items-center gap-2'>
 
-                    <button onClick={handleManageButtonClicked} className='bg-blue-700 text-white px-3 py-2 rounded-xl font-bold active:bg-red-300 active:text-red-900 '>Manage</button>
+                            <button onClick={handleManageButtonClicked} className='bg-blue-700 text-white px-3 py-2 rounded-xl font-bold active:bg-red-300 active:text-red-900 '>Manage</button>
 
 
-                    <FontAwesomeIcon className='bg-red-200 p-4 rounded-full text-red-600 cursor-pointer active:bg-red-400 active:text-red-900' onClick={handleDeleteButtonClicked} icon={faTrash} />
-                </div>
+                            <FontAwesomeIcon className='bg-red-200 p-4 rounded-full text-red-600 cursor-pointer active:bg-red-400 active:text-red-900' onClick={handleDeleteButtonClicked} icon={faTrash} />
+                        </div>
+                }
             </div>
 
 

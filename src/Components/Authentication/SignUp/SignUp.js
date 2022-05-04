@@ -37,6 +37,7 @@ const SignUp = () => {
         pageError = "";
     }
 
+    const navigate = useNavigate();
 
     // Redirect to the last page
     let location = useLocation();
@@ -65,7 +66,7 @@ const SignUp = () => {
 
     }
 
-    const navigate = useNavigate();
+
 
     const handleToSingIn = () => {
         navigate('/login')
@@ -111,7 +112,7 @@ const SignUp = () => {
                         <input className="bg-blue-700 text-white w-full py-1 font-bold tracking-wider text-2xl rounded-lg" type="submit" value="Sing Up" />
                     </form>
 
-                    
+
                     <div className="flex items-center gap-2 mb-10">
                         <h1 className="text-white">Do you have an account ?</h1>
                         <h1 onClick={handleToSingIn} className="active:text-red-400 cursor-pointer text-xl text-yellow-200">Sing In</h1>
