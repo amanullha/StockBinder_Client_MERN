@@ -1,10 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
-import SocialAuthentication from "../SocialAuthentication/SocialAuthentication";
 import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
-import auth from "../../../.firebase.init";
 import { ToastContainer } from "react-toastify";
+import SocialAuthentication from "../SocialAuthentication/SocialAuthentication";
+import auth from "../../../../.firebase.init";
 
 
 
@@ -78,7 +78,7 @@ const SignUp = () => {
 
     return (
         <div>
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-16">
 
                 <div className=" rounded-lg mx-3 w-full sm:w-3/4 md:w-1/2  bg-black flex flex-col  justify-center items-center mt-20 p-5">
 

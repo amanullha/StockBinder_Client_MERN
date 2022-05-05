@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'infinite-react-carousel';
+import { useNavigate } from "react-router-dom";
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,6 +13,10 @@ const ReactSlider = () => {
         arrows: false
     };
 
+    const navigate = useNavigate();
+    const handleSingUpClicked = () => {
+        navigate('/signup');
+    }
 
     return (
         <div className='relative mb-0 '>
@@ -71,31 +76,24 @@ const ReactSlider = () => {
 
             </Slider>
 
-            <div className='text-center top-1/3  left-5 sm:left-1/4   z-10 absolute bg-black bg-opacity-5 p-5 rounded-lg'>
+            <div className='w-full h-full text-center   z-10 absolute bg-black bg-opacity-40 top-0 left-0 flex items-center justify-center'>
 
-                <h1 className='text-md sm:text-xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow-500 '>Car Repair & Services <sub className='text-xs bg-green-300 py-1 px-2 rounded-full text-gray-500 opacity-75'>SAFETY FIRST</sub></h1>
-                <div className="ml-2 sm:ml-3 md:ml-10 lg:ml-10 xl:ml-10 my-3 services-facilities">
+                <div className=' sm:w-3/4 sm:mx-0 w-full mx-5 '>
 
-                    <div className="f-list flex items-center ">
-                        <FontAwesomeIcon className=' text-green-500 pr-2' icon={faCheckCircle} />
-                        <p className='text-gray-200 text-sm sm:text-sm md:text-lg lg:text-lg xl:text-lg'>7 Days Service Warranty
-                        </p>
+                    <h1 className='text-xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow-500 '>Inventory Management
+                        Software in the Cloud
+                        <sub className='text-xs bg-green-300 py-1 px-2 rounded-full text-gray-500 opacity-75'>SAFETY FIRST</sub>
+                    </h1>
 
+                    <div>
+                        <p className='text-md md:text-lg mt-5 text-gray-300 w-3/4 mx-auto'>Simple to use, beautifully designed, customizable inventory software system for any business buying and selling goods</p>
                     </div>
-                    <div className="f-list flex items-center ">
-                        <FontAwesomeIcon className=' text-green-500 pr-2' icon={faCheckCircle} />
-                        <p className='text-gray-200 text-sm sm:text-sm md:text-lg lg:text-lg xl:text-lg'>On Time Work Completion
-                        </p>
 
-                    </div>
-                    <div className="f-list flex items-center ">
-                        <FontAwesomeIcon className=' text-green-500 pr-2' icon={faCheckCircle} />
-
-
-                        <p className='text-gray-200 text-sm sm:text-sm md:text-lg lg:text-lg xl:text-lg'>Skilled & Reliable Vehicle Mechanics with Spare Parts.
-                        </p>
+                    <div>
+                        <button onClick={handleSingUpClicked} className='active:bg-slate-600 mt-5 md:mt-10 md:text-2xl md:px-12 px-5 py-3 bg-yellow-600 rounded-full text-white font-bold md:tracking-widest'>Sing Up-It's Free</button>
                     </div>
                 </div>
+
             </div>
         </div>
     );

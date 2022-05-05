@@ -111,9 +111,9 @@ const Phones = ({ fromCall }) => {
         <div className='mt-0'>
 
 
-            <div className='bg-emerald-200 py-16 mt-0 relative'>
+            <div className='bg-emerald-700 bg-opacity-20 py-16 mt-0 relative'>
 
-                <h1 className='text-center text-4xl font-bold tracking-widest pb-5 text-yellow-700'>{fromCall === "manageInventory" ? "Manage Inventory(All Products)" : "Available Phones"}</h1>
+                <h1 className='text-4xl sm:text-5xl md:text-8xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>{fromCall === "manageInventory" ? "Manage Inventory(All Products)" : "Available Phones"}</h1>
 
                 <div className='flex items-center gap-5 justify-between m-5  p-3'>
 
@@ -182,7 +182,7 @@ const Phones = ({ fromCall }) => {
                 <div className='flex justify-center'>
                     {
                         fromCall === "home" ? <div>
-                            <button onClick={handleToMangeInventory} className='rounded-lg bg-emerald-400 px-5 md:px-12 py-1 font-bold text-2xl active:bg-transparent active:text-yellow-700 active:border-2 my-10 text-emerald-100   '>Mange Inventory <FontAwesomeIcon icon={faAngleRight} /></button>
+                            <button onClick={handleToMangeInventory} className='rounded-lg bg-green-700 px-5 md:px-12 py-1 font-bold text-2xl active:bg-transparent active:text-yellow-700 active:border-2 my-10 text-emerald-100   '>Mange Inventory <FontAwesomeIcon icon={faAngleRight} /></button>
                         </div> : ""
                     }
                 </div>

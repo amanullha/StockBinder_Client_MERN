@@ -2,7 +2,7 @@ import React from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
-import auth from "../../../.firebase.init";
+import auth from "../../../../.firebase.init";
 import SocialAuthentication from "../SocialAuthentication/SocialAuthentication";
 
 

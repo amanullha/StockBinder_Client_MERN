@@ -39,7 +39,7 @@ const SinglePhone = ({ phone, handleDeletePhone, fromCall }) => {
 
     return (
         <div className='relative'>
-            <div className='flex items-center gap-5 justify-between m-5 bg-green-100 p-3 rounded-2xl px-5 md:px-8'>
+            <div className='flex items-center gap-5 justify-between m-5 bg-opacity-25 bg-green-700 p-3 rounded-2xl px-5 md:px-8'>
 
                 <img className='rounded-sm' width={50} height={50} src={image} alt="" />
 

@@ -118,7 +118,7 @@ const ManageItem = () => {
     return (
         <div className='min-h-[100vh] bg-slate-200 pt-20'>
 
-            <h1 className='text-center text-green-800 text-4xl font-bold tracking-widest'>Manage Phone Stock</h1>
+            <h1 className='text-4xl sm:text-5xl md:text-8xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>Manage Phone Stock</h1>
 
             <div className='my-20 mx-auto p-5 md:p-12 bg-slate-200  '>
 

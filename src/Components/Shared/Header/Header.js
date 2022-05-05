@@ -77,6 +77,7 @@ const Header = () => {
 
 
                         <Link className={`  ${location.pathname === "/about" ? `text-yellow-500` : `text-white`}`} to='/about'>ABOUT</Link>
+                        <Link className={`  ${location.pathname === "/contact-us" ? `text-yellow-500` : `text-white`}`} to='/contact-us'>CONTACT US</Link>
 
                         {
                             user?.uid ?
