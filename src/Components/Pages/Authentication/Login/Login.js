@@ -1,8 +1,10 @@
+import axios from "axios";
 import React from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../../.firebase.init";
+import Loading from "../../Loading/Loading";
 import SocialAuthentication from "../SocialAuthentication/SocialAuthentication";
 
 
@@ -21,7 +23,7 @@ const Login = () => {
 
     // React form
     const { register, handleSubmit, formState: { errors } } = useForm();
-
+    const navigate = useNavigate();
 
     if (loginError) {
         pageError = <p className='text-sm text-red-500'>{loginError?.message}</p>;
@@ -40,20 +42,34 @@ const Login = () => {
 
 
 
-    const onSubmit = data => {
+    const onSubmit = async (formData) => {
 
-        signInWithEmailAndPassword(data.Email, data.Password);
+        signInWithEmailAndPassword(formData.Email, formData.Password);
+
+        const { data } = await axios.post('http://localhost:5000/login', { email: formData.Email })
+
+        console.log("token data ", data);
+
+        localStorage.setItem('accessToken', data.accessToken);
+
+
+
+
         pageError = <p className='text-sm text-green-700'>Login successfully!</p>;
 
     }
 
-    const navigate = useNavigate();
+
 
     const handleToForgetPassword = () => {
         navigate('/forget-password')
     }
     const handleToSingUp = () => {
         navigate('/signup')
+    }
+
+    if (loading) {
+        return <Loading />
     }
 
 

@@ -15,7 +15,7 @@ import Login from './Components/Pages/Authentication/Login/Login';
 import SignUp from './Components/Pages/Authentication/SignUp/SignUp';
 import ForgetPassword from './Components/Pages/Authentication/ForgetPassword/ForgetPassword';
 import Loading from './Components/Pages/Loading/Loading';
-
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -47,9 +47,10 @@ function App() {
 
 
         <Route path="/inventory" element={<RequireAuth><ManageInventory /></RequireAuth>} />
-        <Route path="/my-items" element={<MyItems />} />
-        <Route path="/add-items" element={<AddItems />} />
-        <Route path="/manage-item/:_id" element={<ManageItem />} />
+
+        <Route path="/my-items" element={<RequireAuth><MyItems /></RequireAuth>} />
+        <Route path="/add-items" element={<RequireAuth><AddItems /></RequireAuth>} />
+        <Route path="/manage-item/:_id" element={<RequireAuth><ManageItem /></RequireAuth>} />
 
 
 

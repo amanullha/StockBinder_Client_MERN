@@ -22,12 +22,18 @@ const Header = () => {
     }
     const handleSingOut = () => {
         signOut(auth);
+        oneHeaderSelected(); 
+    }
+
+    const oneHeaderSelected = () => {
+        setOpen(false);
     }
 
 
     let location = useLocation();
 
     const navigate = useNavigate();
+
     const handleImageClicked = () => {
         navigate('/home');
     }
@@ -53,9 +59,9 @@ const Header = () => {
 
 
 
-                        <Link className={`  ${location.pathname === "/home" ? `text-yellow-500` : `text-white`}`} to='/home'>HOME</Link>
+                        <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/home" ? `text-yellow-500` : `text-white`}`} to='/home'>HOME</Link>
 
-                        <Link className={`  ${location.pathname === "/inventory" ? `text-yellow-500` : `text-white`}`} to='/inventory'>INVENTORY</Link>
+                        <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/inventory" ? `text-yellow-500` : `text-white`}`} to='/inventory'>INVENTORY</Link>
 
 
                         {/* 
@@ -64,10 +70,10 @@ const Header = () => {
 
 
                         {
-                            user?.uid ? <Link className={`  ${location.pathname === "/my-items" ? `text-yellow-500` : `text-white`}`} to='/my-items'>MY ITEMS</Link> : ""
+                            user?.uid ? <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/my-items" ? `text-yellow-500` : `text-white`}`} to='/my-items'>MY ITEMS</Link> : ""
                         }
                         {
-                            user?.uid ? <Link className={`  ${location.pathname === "/add-items" ? `text-yellow-500` : `text-white`}`} to='/add-items'>ADD ITEMS</Link> : ""
+                            user?.uid ? <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/add-items" ? `text-yellow-500` : `text-white`}`} to='/add-items'>ADD ITEMS</Link> : ""
                         }
 
 
@@ -76,20 +82,20 @@ const Header = () => {
 
 
 
-                        <Link className={`  ${location.pathname === "/about" ? `text-yellow-500` : `text-white`}`} to='/about'>ABOUT</Link>
-                        <Link className={`  ${location.pathname === "/contact-us" ? `text-yellow-500` : `text-white`}`} to='/contact-us'>CONTACT US</Link>
+                        <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/about" ? `text-yellow-500` : `text-white`}`} to='/about'>ABOUT</Link>
+                        <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/contact-us" ? `text-yellow-500` : `text-white`}`} to='/contact-us'>CONTACT US</Link>
 
                         {
                             user?.uid ?
 
                                 <h1 className='cursor-pointer bg-blue-600 px-2 py-1 rounded-lg  ' onClick={handleSingOut}>LOGOUT</h1>
                                 :
-                                <Link className={`  ${location.pathname === "/login" ? `text-yellow-500` : `text-white`}`} to='/login'>LOG IN</Link>
+                                <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/login" ? `text-yellow-500` : `text-white`}`} to='/login'>LOG IN</Link>
                         }
 
                         {
                             user?.uid ? '' :
-                                <Link className={`bg-blue-600 px-2 py-1 rounded-lg  ${location.pathname === "/signup" ? `text-yellow-500` : `text-white`}`} to='/signup'>SING UP</Link>
+                                <Link onClick={oneHeaderSelected} className={`bg-blue-600 px-2 py-1 rounded-lg  ${location.pathname === "/signup" ? `text-yellow-500` : `text-white`}`} to='/signup'>SING UP</Link>
                         }
 
                         {

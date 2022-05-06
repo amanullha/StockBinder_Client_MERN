@@ -5,14 +5,15 @@ import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateP
 import { ToastContainer } from "react-toastify";
 import SocialAuthentication from "../SocialAuthentication/SocialAuthentication";
 import auth from "../../../../.firebase.init";
+import Loading from "../../Loading/Loading";
 
 
 
 const SignUp = () => {
 
     let pageError;
-    // React Firebase Hook-> useCreateUserWithEmailAndPassword
 
+    // React Firebase Hook-> useCreateUserWithEmailAndPassword
     const [
         createUserWithEmailAndPassword,
         user,
@@ -42,8 +43,10 @@ const SignUp = () => {
     // Redirect to the last page
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
-
+    console.log("out From : ", from);
+    
     if (user) {
+        console.log("in user: ", user);
         navigate(from, { replace: true });
     }
 
@@ -51,11 +54,15 @@ const SignUp = () => {
     const onSubmit = async (data) => {
 
         await createUserWithEmailAndPassword(data.Email, data.Password);
+
         pageError = <p className='text-sm text-green-700'>Registered successfully!</p>;
+
         handleUpdatProfile(data.Name);
         sendEmailVerification(data.Email);
 
     }
+
+
     // React firebase hook-> useSendEmailVerification
     const handleSendEmailVerification = async (email) => {
         await sendEmailVerification(email);
@@ -73,6 +80,10 @@ const SignUp = () => {
     }
     const handleToForgetPassword = () => {
         navigate('/forget-password')
+    }
+
+    if (loading || updating || sending) {
+        return <Loading />
     }
 
 

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import auth from '../../../../.firebase.init';
+import Loading from '../../Loading/Loading';
 
 const ForgetPassword = () => {
 
@@ -22,7 +23,9 @@ const ForgetPassword = () => {
             navigate('/login')
         }, 1000);
     }
-
+    if (sending) {
+        return <Loading />
+    }
 
 
     return (

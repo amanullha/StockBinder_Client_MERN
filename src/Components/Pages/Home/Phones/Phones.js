@@ -9,6 +9,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { Navigate, useNavigate } from 'react-router-dom';
+import Loading from '../../Loading/Loading';
 
 
 const Phones = ({ fromCall }) => {
@@ -29,6 +30,8 @@ const Phones = ({ fromCall }) => {
     // const [phones, setPhones] = usePhones(currentPageNbr, totalPhoneInPage);
 
     const [phones, setPhones] = useState([]);
+
+
 
     useEffect(() => {
 
@@ -104,7 +107,9 @@ const Phones = ({ fromCall }) => {
     const handleToMangeInventory = () => {
         navigate('/inventory');
     }
-
+    if (loading) {
+        return <Loading />
+    }
 
 
     return (

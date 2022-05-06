@@ -21,7 +21,13 @@ const ManageItem = () => {
 
 
         const getData = async () => {
-            await axios.get(`http://localhost:5000/phones/${_id}`)
+            await axios.get(`http://localhost:5000/phones/${_id}`, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+                    email: user?.email
+                },
+
+            })
                 .then(data => {
                     // console.log(data.data);
                     setPhone(data?.data[0]);
@@ -34,7 +40,7 @@ const ManageItem = () => {
 
 
 
-    }, [])
+    }, [_id])
 
 
     const handleAddQuantity = () => {
@@ -42,6 +48,10 @@ const ManageItem = () => {
         if (parseInt(neqQuantityRef?.current?.value)) {
 
             const newQuantity = parseInt(neqQuantityRef.current.value) + parseInt(phone?.quantity || 0);
+
+            const newPhone = phone;
+            newPhone.quantity = newQuantity;
+            setPhone(newPhone);
 
             const updatedPhone = { quantity: newQuantity, soldItems: phone.soldItems };
 
@@ -56,9 +66,9 @@ const ManageItem = () => {
                 .then(res => {
                     if (res.acknowledged) {
 
-                        const newPhone = phone;
-                        newPhone.quantity = newQuantity;
-                        setPhone(newPhone);
+                        // const newPhone = phone;
+                        // newPhone.quantity = newQuantity;
+                        // setPhone(newPhone);
 
                         toast("Quantity updated!");
                     }
@@ -98,13 +108,15 @@ const ManageItem = () => {
 
                         setPhone(newPhone);
 
-                        toast("Derived an Item!");
+                        toast("Delivered an Item!");
                     }
                 })
 
 
         }
     }
+
+
 
 
 

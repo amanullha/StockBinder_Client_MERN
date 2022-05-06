@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import SinglePhone from '../Home/SinglePhone/SinglePhone';
 import auth from '../../../.firebase.init';
+import Loading from '../Loading/Loading';
 
 
 const MyItems = () => {
@@ -67,7 +68,7 @@ const MyItems = () => {
 
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <Loading />
     }
 
     // console.log("user : ", user?.email);

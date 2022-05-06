@@ -7,9 +7,11 @@ const ContactUs = () => {
         <div>
             <div className=' py-12'>
 
-                <div className='flex items-center justify-center my-20'>
+                <div className='flex items-center  justify-center my-20'>
+
                     <h1 className='text-4xl sm:text-5xl md:text-8xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800'>Hello!  </h1>
-                    <h1 className='text-4xl sm:text-5xl md:text-8xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 ml-2'>How can we help You?</h1>
+                    <h1 className='text-3xl sm:text-4xl md:text-7xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 ml-2'>How can we help You?</h1>
+                    
                 </div>
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-5 my-12'>
