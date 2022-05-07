@@ -122,7 +122,7 @@ const Phones = ({ fromCall }) => {
 
 
                 <Roll top>
-                    <h1 className='text-3xl sm:text-4xl md:text-6xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>{fromCall === "manageInventory" ? "Manage Inventory(All Products)" : "Available Phones"}</h1>
+                    <h1 className='pt-5 text-3xl sm:text-4xl md:text-6xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>{fromCall === "manageInventory" ? "Manage Inventory(All Products)" : "Available Phones"}</h1>
                 </Roll>
                 <div className='flex items-center gap-5 justify-between m-5  p-3'>
 

@@ -129,7 +129,7 @@ const SignUp = () => {
                             <div>
                                 {pageError}
                             </div>
-                            <input className="bg-blue-700 text-white w-full py-1 font-bold tracking-wider text-2xl rounded-lg" type="submit" value="Sing Up" />
+                            <input className="cursor-pointer bg-blue-700 text-white w-full py-1 font-bold tracking-wider text-2xl rounded-lg" type="submit" value="Sing Up" />
                         </form>
 
 

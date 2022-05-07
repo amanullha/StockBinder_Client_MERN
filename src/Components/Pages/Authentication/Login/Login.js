@@ -132,7 +132,7 @@ const Login = () => {
 
                             <div>{pageError}</div>
 
-                            <input className="bg-blue-700 text-white w-full py-1 font-bold tracking-wider text-2xl rounded-lg" type="submit" value="LogIn" />
+                            <input className="cursor-pointer bg-blue-700 text-white w-full py-1 font-bold tracking-wider text-2xl rounded-lg" type="submit" value="LogIn" />
                         </form>
 
                         <div className="flex items-center gap-2 mb-10">
