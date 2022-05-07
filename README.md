@@ -47,8 +47,9 @@
 <table>
  
   <tr>
-    <td><img src="https://i.ibb.co/rMkcBtX/Screenshot-from-2022-05-08-02-20-38.png" alt="mockup" /></td>
     <td><img src="https://i.ibb.co/bz9YYzd/Screenshot-from-2022-05-08-02-23-21.png" alt="mockups" /></td>
+    <td><img src="https://i.ibb.co/rMkcBtX/Screenshot-from-2022-05-08-02-20-38.png" alt="mockup" /></td>
+    
   </tr>
    <tr>
     <td><img src="https://i.ibb.co/mhYXL9M/Screenshot-from-2022-05-08-02-20-03.png" alt="mockup" /></td>
