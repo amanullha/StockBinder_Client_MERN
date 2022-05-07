@@ -48,24 +48,46 @@
 
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/64949957/159116105-15b9425c-1fec-4a52-84ba-cf97eef93891.png" alt="mockup" /></td>
-    <td><img src="https://user-images.githubusercontent.com/64949957/159116112-1c7dec3e-0f3a-45a8-83d3-6d6b9ee1d5de.png" alt="mockups" /></td>
+    <td><img src="https://i.ibb.co/mhYXL9M/Screenshot-from-2022-05-08-02-20-03.png" alt="mockup" /></td>
+    <td><img src="https://i.ibb.co/w09LCw9/Screenshot-from-2022-05-08-02-20-18.png" alt="mockups" /></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/64949957/159116115-46f15626-372d-4349-8ef4-a04a70600dcc.png" alt="mockup" /></td>
-    <td><img src="https://user-images.githubusercontent.com/64949957/159116118-ac3d261b-eb50-4a7b-a8e6-cd1a0f5720de.png" alt="mockups" /></td>
+    <td><img src="https://i.ibb.co/rMkcBtX/Screenshot-from-2022-05-08-02-20-38.png" alt="mockup" /></td>
+    <td><img src="https://i.ibb.co/bz9YYzd/Screenshot-from-2022-05-08-02-23-21.png" alt="mockups" /></td>
   </tr>
 </table>
 
+## Installed packages
+
+- npm install react-router-dom@6
+- npm install axois
+- npm install firebase
+- npm install --save react-firebase-hooks
+- npm i react-fontawesome
+- npm install react-hook-form
+- npm install -D tailwindcss postcss autoprefixer
+- npx tailwindcss init -p
+- npm i styled-components
+- npm install react-icons
+- npm i --save @fortawesome/fontawesome-svg-core
+- npm i --save @fortawesome/free-solid-svg-icons
+- npm i --save @fortawesome/free-regular-svg-icons
+- npm i react-toastify
+- npm install --save react-toastify
+- npm i infinite-react-carousel
+- npm install react-loader-spinner --save
+- npm install react-reveal --save
+- npm install -g firebase-tools
+
+<br/>
+<br/>
+<br/>
+<br/>
 <h2>📬 Contact</h2>
 
 If you want to contact me, you can reach me through below handles.
 
-[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jigar-sable)
-
-© 2022 Jigar Sable
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![linkedin](https://www.linkedin.com/in/md-aman-ullha-9a9527161/)]
 
 # Getting Started with Create React App
 
