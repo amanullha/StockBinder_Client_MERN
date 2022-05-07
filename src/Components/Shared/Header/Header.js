@@ -22,7 +22,7 @@ const Header = () => {
     }
     const handleSingOut = () => {
         signOut(auth);
-        oneHeaderSelected(); 
+        oneHeaderSelected();
     }
 
     const oneHeaderSelected = () => {
@@ -43,7 +43,7 @@ const Header = () => {
 
             <div className='bg-black relative'>
 
-                <nav className='flex items-center justify-between mx-5 lg:mx-40'>
+                <nav className='flex items-center justify-between mx-5 lg:mx-5 xl:mx-20'>
 
                     <div>
                         <img className='cursor-pointer' onClick={handleImageClicked} width={200} src="logo.png" alt="" />

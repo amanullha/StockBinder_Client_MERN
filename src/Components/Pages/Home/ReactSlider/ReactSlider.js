@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { Fade } from 'react-reveal';
 
 
 const ReactSlider = () => {
@@ -80,18 +81,24 @@ const ReactSlider = () => {
 
                 <div className=' sm:w-3/4 sm:mx-0 w-full mx-5 '>
 
-                    <h1 className='text-xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow-500 '>Inventory Management
-                        Software in the Cloud
-                        <sub className='text-xs bg-green-300 py-1 px-2 rounded-full text-gray-500 opacity-75'>SAFETY FIRST</sub>
-                    </h1>
+                    <Fade right>
+                        <h1 className='text-xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow-500 '>Inventory Management
+                            Software in the Cloud
+                            <sub className='text-xs bg-green-300 py-1 px-2 rounded-full text-gray-500 opacity-75'>SAFETY FIRST</sub>
+                        </h1>
+                    </Fade>
 
-                    <div>
-                        <p className='text-md md:text-lg mt-5 text-gray-300 w-3/4 mx-auto'>Simple to use, beautifully designed, customizable inventory software system for any business buying and selling goods</p>
-                    </div>
+                    <Fade left>
+                        <div>
+                            <p className='text-md md:text-lg mt-5 text-gray-300 w-3/4 mx-auto'>Simple to use, beautifully designed, customizable inventory software system for any business buying and selling goods</p>
+                        </div>
+                    </Fade>
 
-                    <div>
-                        <button onClick={handleSingUpClicked} className='active:bg-slate-600 mt-5 md:mt-10 md:text-2xl md:px-12 px-5 py-3 bg-yellow-600 rounded-full text-white font-bold md:tracking-widest'>Sing Up-It's Free</button>
-                    </div>
+                    <Fade top>
+                        <div>
+                            <button onClick={handleSingUpClicked} className='active:bg-slate-600 mt-5 md:mt-10 md:text-2xl md:px-12 px-5 py-3 bg-yellow-600 rounded-full text-white font-bold md:tracking-widest'>Sing Up-It's Free</button>
+                        </div>
+                    </Fade>
                 </div>
 
             </div>

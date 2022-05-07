@@ -2,6 +2,7 @@ import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../../.firebase.init';
+import useToken from '../../../../hooks/useToken';
 import Loading from '../../Loading/Loading';
 
 const SocialAuthentication = () => {
@@ -9,6 +10,9 @@ const SocialAuthentication = () => {
     let pageError;
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+    const [token] = useToken(user);
+
 
     if (error) {
         pageError = <p className='text-sm text-red-500'>{error?.message}</p>;
@@ -21,13 +25,18 @@ const SocialAuthentication = () => {
     const navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
-    console.log("from : ", from);
+    // console.log("from : ", from);
 
-    if (user) {
+    if (token) {
+
         navigate(from, { replace: true });
     }
+    // if (user) {
+    //     navigate(from, { replace: true });
+    // }
 
     const handleWithGoogle = () => {
+
         signInWithGoogle();
         pageError = <p className='text-sm text-green-700'>Login successfully!</p>;
 

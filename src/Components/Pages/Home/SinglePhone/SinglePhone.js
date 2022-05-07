@@ -1,6 +1,7 @@
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { Fade } from 'react-reveal';
 import { useNavigate } from 'react-router-dom';
 
 const SinglePhone = ({ phone, handleDeletePhone, fromCall }) => {
@@ -39,28 +40,30 @@ const SinglePhone = ({ phone, handleDeletePhone, fromCall }) => {
 
     return (
         <div className='relative'>
-            <div className='flex items-center gap-5 justify-between m-5 bg-opacity-25 bg-green-700 p-3 rounded-2xl px-5 md:px-8'>
+            <Fade bottom>
+                <div className='flex items-center gap-5 justify-between m-5 bg-opacity-25 bg-green-700 p-3 rounded-2xl px-5 md:px-8'>
 
-                <img className='rounded-sm' width={50} height={50} src={image} alt="" />
+                    <img className='rounded-sm' width={50} height={50} src={image} alt="" />
 
-                <h1 className='text-xl font-bold' >{name}</h1>
-                <h1 className='text-xl font-bold' >{price}</h1>
-                <h1 className='text-xl font-bold' >{quantity}</h1>
-                <h1 className='text-xl font-bold' >{soldItems}</h1>
-                <h1 className='text-xl font-bold' >{supplier}</h1>
+                    <h1 className='text-xl font-bold' >{name}</h1>
+                    <h1 className='text-xl font-bold' >{price}</h1>
+                    <h1 className='text-xl font-bold' >{quantity}</h1>
+                    <h1 className='text-xl font-bold' >{soldItems}</h1>
+                    <h1 className='text-xl font-bold' >{supplier}</h1>
 
-                {
-                    fromCall === "home" ? ""
-                        :
-                        <div className='flex items-center gap-2'>
+                    {
+                        fromCall === "home" ? ""
+                            :
+                            <div className='flex items-center gap-2'>
 
-                            <button onClick={handleManageButtonClicked} className='bg-blue-700 text-white px-3 py-2 rounded-xl font-bold active:bg-red-300 active:text-red-900 '>Manage</button>
+                                <button onClick={handleManageButtonClicked} className='bg-blue-700 text-white px-3 py-2 rounded-xl font-bold active:bg-red-300 active:text-red-900 '>Manage</button>
 
 
-                            <FontAwesomeIcon className='bg-red-200 p-4 rounded-full text-red-600 cursor-pointer active:bg-red-400 active:text-red-900' onClick={handleDeleteButtonClicked} icon={faTrash} />
-                        </div>
-                }
-            </div>
+                                <FontAwesomeIcon className='bg-red-200 p-4 rounded-full text-red-600 cursor-pointer active:bg-red-400 active:text-red-900' onClick={handleDeleteButtonClicked} icon={faTrash} />
+                            </div>
+                    }
+                </div>
+            </Fade>
 
 
 

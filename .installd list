@@ -16,7 +16,8 @@
 15.  npm install --save react-toastify
 16.  npm i infinite-react-carousel
 17.  npm install react-loader-spinner --save
-18.  
+18.  npm install react-reveal --save
+
 19.  
 
 

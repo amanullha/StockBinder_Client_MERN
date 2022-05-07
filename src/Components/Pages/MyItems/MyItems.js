@@ -118,11 +118,11 @@ const MyItems = () => {
 
 
     return (
-        <div>
+        <div className='bg-emerald-700 bg-opacity-20'>
 
 
 
-            <div className='bg-emerald-700 bg-opacity-20 py-16 rounded-md relative'>
+            <div className='mx-5 lg:mx-10 xl:mx-20   py-16 rounded-md relative'>
 
                 <h1 className='text-4xl sm:text-5xl md:text-8xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>My Added Items</h1>
 
