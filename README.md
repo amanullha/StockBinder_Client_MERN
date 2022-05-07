@@ -20,7 +20,7 @@
 
 **Deployed On (FontEnd):**
 
-![Firebase](https://console.firebase.google.com/)
+![Firebase](https://img.shields.io/badge/-Firebase-orange)
 
 **Deployed On (BackEnd):**
 
