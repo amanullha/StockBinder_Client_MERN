@@ -117,12 +117,12 @@ const Phones = ({ fromCall }) => {
         <div className='mt-0 bg-emerald-700 bg-opacity-20'>
 
 
-            <div className='mx-5 lg:mx-5 xl:mx-20  py-16 mt-0 relative '>
+            <div className='mx-5 lg:mx-5 xl:mx-20 pt-5 pb-12 mt-0 relative '>
 
 
 
                 <Roll top>
-                    <h1 className='text-4xl sm:text-5xl md:text-8xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>{fromCall === "manageInventory" ? "Manage Inventory(All Products)" : "Available Phones"}</h1>
+                    <h1 className='text-3xl sm:text-4xl md:text-7xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>{fromCall === "manageInventory" ? "Manage Inventory(All Products)" : "Available Phones"}</h1>
                 </Roll>
                 <div className='flex items-center gap-5 justify-between m-5  p-3'>
 
@@ -131,7 +131,11 @@ const Phones = ({ fromCall }) => {
                     <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Name</h1>
                     <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Price</h1>
                     <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Quantity</h1>
-                    <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Sold</h1>
+                    {
+                        fromCall === "home" ? ""
+                            :
+                            <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Sold</h1>
+                    }
                     <h1 className='sm:text-2xl text-lg font-bold text-yellow-600' >Supplier</h1>
                     {
                         fromCall === 'home' ? ""

@@ -11,10 +11,10 @@ const ContactUs = () => {
 
 
                 <LightSpeed bottom>
-                    <div className=' flex items-center  justify-center my-20'>
+                    <div className=' flex items-center  justify-center my-10'>
 
-                        <h1 className='text-4xl sm:text-5xl md:text-8xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800'>Hello!  </h1>
-                        <h1 className='text-3xl sm:text-4xl md:text-7xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 ml-2'>How can we help You?</h1>
+                        <h1 className='text-3xl sm:text-4xl md:text-7xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800'>Hello!  </h1>
+                        <h1 className='text-2xl sm:text-3xl md:text-6xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 ml-2'>How can we help You?</h1>
 
                     </div>
                 </LightSpeed>

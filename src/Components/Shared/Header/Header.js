@@ -103,7 +103,7 @@ const Header = () => {
 
                                 <>
                                     {
-                                        user?.photoURL ? <img title={user.displayName} width={40} className='cursor-pointer' style={{ borderRadius: '50%' }} src={user.photoURL} alt="" srcset="" /> : <FontAwesomeIcon style={{ borderRadius: '50%' }} className='bg-slate-600 p-3' icon={faUser} />
+                                        user?.photoURL ? <img title={user.displayName} width={40} className='cursor-pointer' style={{ borderRadius: '50%' }} src={user.photoURL} alt="" srcset="" /> : <FontAwesomeIcon title={user.displayName} style={{ borderRadius: '50%' }} className='bg-slate-600 p-3' icon={faUser} />
                                     }
                                 </>
                                 :

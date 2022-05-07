@@ -23,7 +23,7 @@ const AddItems = () => {
 
         if (user?.uid) {
 
-            data.email = user?.email;
+            data.user = user?.email;
 
             // add items to the db
             fetch('https://arcane-oasis-08420.herokuapp.com/phones', {

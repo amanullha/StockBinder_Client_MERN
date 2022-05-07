@@ -48,7 +48,11 @@ const SinglePhone = ({ phone, handleDeletePhone, fromCall }) => {
                     <h1 className='text-xl font-bold' >{name}</h1>
                     <h1 className='text-xl font-bold' >{price}</h1>
                     <h1 className='text-xl font-bold' >{quantity}</h1>
-                    <h1 className='text-xl font-bold' >{soldItems}</h1>
+                    {
+                        fromCall === "home" ? ""
+                            :
+                            <h1 className='text-xl font-bold' >{soldItems}</h1>
+                    }
                     <h1 className='text-xl font-bold' >{supplier}</h1>
 
                     {
