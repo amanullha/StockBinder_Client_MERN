@@ -16,7 +16,7 @@ const useToken = user => {
             const email = user?.user?.email;
 
             if (email) {
-                const { data } = await axios.post('http://localhost:5000/login', { email });
+                const { data } = await axios.post('https://arcane-oasis-08420.herokuapp.com/login', { email });
 
                 localStorage.setItem('accessToken', data.accessToken);
 

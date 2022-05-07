@@ -7,7 +7,7 @@ const usePhones = (currentPageNbr, totalPhoneInPage) => {
 
     useEffect(() => {
 
-        axios.get('http://localhost:5000/phones')
+        axios.get('https://arcane-oasis-08420.herokuapp.com/phones')
             .then(data => setPhones(data.data))
 
     }, [])

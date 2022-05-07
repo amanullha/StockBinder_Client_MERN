@@ -73,7 +73,7 @@ const Login = () => {
 
         // get access token and store to the local storage
 
-        // const { data } = await axios.post('http://localhost:5000/login', { email: user?.user?.email })
+        // const { data } = await axios.post('https://arcane-oasis-08420.herokuapp.com/login', { email: user?.user?.email })
 
         // console.log("token data ", data);
 

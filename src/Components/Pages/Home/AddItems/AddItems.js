@@ -26,7 +26,7 @@ const AddItems = () => {
             data.email = user?.email;
 
             // add items to the db
-            fetch('http://localhost:5000/phones', {
+            fetch('https://arcane-oasis-08420.herokuapp.com/phones', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'

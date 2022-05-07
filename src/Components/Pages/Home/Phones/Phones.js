@@ -36,14 +36,14 @@ const Phones = ({ fromCall }) => {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:5000/phones?currentPageNbr=${currentPageNbr}&totalPhoneInPage=${totalPhoneInPage}`)
+        axios.get(`https://arcane-oasis-08420.herokuapp.com/phones?currentPageNbr=${currentPageNbr}&totalPhoneInPage=${totalPhoneInPage}`)
             .then(data => setPhones(data.data))
 
     }, [currentPageNbr, totalPhoneInPage])
 
 
     useEffect(() => {
-        axios.get('http://localhost:5000/phones-count')
+        axios.get('https://arcane-oasis-08420.herokuapp.com/phones-count')
             .then(data => {
 
                 // setTotalPhonesCount(data.data.PhonesCount);
@@ -83,7 +83,7 @@ const Phones = ({ fromCall }) => {
             }
         }
 
-        fetch(`http://localhost:5000/phones/${_id}`, {
+        fetch(`https://arcane-oasis-08420.herokuapp.com/phones/${_id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

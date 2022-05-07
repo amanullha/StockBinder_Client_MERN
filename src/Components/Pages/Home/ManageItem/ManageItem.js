@@ -25,7 +25,7 @@ const ManageItem = () => {
 
         const getData = async () => {
             try {
-                await axios.get(`http://localhost:5000/phones/${_id}`, {
+                await axios.get(`https://arcane-oasis-08420.herokuapp.com/phones/${_id}`, {
                     headers: {
                         authorization: `Bearer ${localStorage.getItem('accessToken')}`,
                         email: user?.email
@@ -69,7 +69,7 @@ const ManageItem = () => {
 
             const updatedPhone = { quantity: newQuantity, soldItems: phone.soldItems };
 
-            fetch(`http://localhost:5000/phones/${_id}`, {
+            fetch(`https://arcane-oasis-08420.herokuapp.com/phones/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -116,7 +116,7 @@ const ManageItem = () => {
 
             const updatedPhone = { quantity: newQuantity, soldItems: newSold };
 
-            fetch(`http://localhost:5000/phones/${_id}`, {
+            fetch(`https://arcane-oasis-08420.herokuapp.com/phones/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

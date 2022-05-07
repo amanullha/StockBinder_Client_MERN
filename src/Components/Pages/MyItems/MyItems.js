@@ -27,7 +27,7 @@ const MyItems = () => {
 
     // useEffect(() => {
 
-    //     axios.get(`http://localhost:5000/phones?currentPageNbr=${currentPageNbr}&totalPhoneInPage=${totalPhoneInPage}`)
+    //     axios.get(`https://arcane-oasis-08420.herokuapp.com/phones?currentPageNbr=${currentPageNbr}&totalPhoneInPage=${totalPhoneInPage}`)
     //         .then(data => setPhones(data.data))
 
     // }, [currentPageNbr, totalPhoneInPage])
@@ -43,7 +43,7 @@ const MyItems = () => {
             const data = { email: user?.email };
 
             // add items to the db
-            fetch('http://localhost:5000/productByEmail', {
+            fetch('https://arcane-oasis-08420.herokuapp.com/productByEmail', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'
@@ -94,7 +94,7 @@ const MyItems = () => {
             }
         }
 
-        fetch(`http://localhost:5000/phones/${_id}`, {
+        fetch(`https://arcane-oasis-08420.herokuapp.com/phones/${_id}`, {
             method: "DELETE",
         })
             .then(res => res.json())
