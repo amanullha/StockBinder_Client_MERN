@@ -122,9 +122,9 @@ const MyItems = () => {
 
 
 
-            <div className='mx-5 lg:mx-10 xl:mx-20   py-16 rounded-md relative'>
+            <div className='mx-5 lg:mx-10 xl:mx-20   py-12 rounded-md relative'>
 
-                <h1 className='text-4xl sm:text-5xl md:text-8xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>My Added Items</h1>
+                <h1 className='text-2xl sm:text-4xl md:text-6xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>My Added Items</h1>
 
                 <div className='flex items-center gap-5 justify-between m-5  p-3'>
 
