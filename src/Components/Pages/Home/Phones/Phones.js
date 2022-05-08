@@ -120,7 +120,6 @@ const Phones = ({ fromCall }) => {
             <div className='mx-5 lg:mx-5 xl:mx-20 pt-5 pb-12 mt-0 relative '>
 
 
-
                 <Roll top>
                     <h1 className='pt-5 text-3xl sm:text-4xl md:text-6xl font-bold tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-yellow-700 to-green-800 text-center'>{fromCall === "manageInventory" ? "Manage Inventory(All Products)" : "Available Phones"}</h1>
                 </Roll>

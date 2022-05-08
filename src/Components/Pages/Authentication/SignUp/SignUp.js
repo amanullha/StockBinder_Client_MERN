@@ -65,8 +65,8 @@ const SignUp = () => {
 
         pageError = <p className='text-sm text-green-700'>Registered successfully!</p>;
 
-        handleUpdatProfile(data.Name);
-        sendEmailVerification(data.Email);
+        await handleUpdatProfile(data.Name);
+        await sendEmailVerification(data.Email);
 
     }
 
