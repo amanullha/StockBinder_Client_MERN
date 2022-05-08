@@ -84,6 +84,7 @@ const Header = () => {
 
                         <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/about" ? `text-yellow-500` : `text-white`}`} to='/about'>ABOUT</Link>
                         <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/contact-us" ? `text-yellow-500` : `text-white`}`} to='/contact-us'>CONTACT US</Link>
+                        <Link onClick={oneHeaderSelected} className={`  ${location.pathname === "/blogs" ? `text-yellow-500` : `text-white`}`} to='/blogs'>BLOGS</Link>
 
                         {
                             user?.uid ?

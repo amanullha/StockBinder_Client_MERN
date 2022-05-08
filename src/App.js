@@ -16,6 +16,7 @@ import SignUp from './Components/Pages/Authentication/SignUp/SignUp';
 import ForgetPassword from './Components/Pages/Authentication/ForgetPassword/ForgetPassword';
 import Loading from './Components/Pages/Loading/Loading';
 import 'react-toastify/dist/ReactToastify.css';
+import Blogs from './Components/Pages/Blogs/Blogs/Blogs';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
 
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
 
 
 

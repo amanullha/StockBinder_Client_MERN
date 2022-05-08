@@ -1,6 +1,6 @@
 # StockBinder MERN stack project
 
-[Visit Now](https://stock-blinder.web.app/home) 🚀
+[Visit Now](https://stock-binder-ef7f4.web.app/) 🚀
 
 ## 🖥️ Tech Stack
 
