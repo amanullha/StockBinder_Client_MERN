@@ -17,6 +17,7 @@ import ForgetPassword from './Components/Pages/Authentication/ForgetPassword/For
 import Loading from './Components/Pages/Loading/Loading';
 import 'react-toastify/dist/ReactToastify.css';
 import Blogs from './Components/Pages/Blogs/Blogs/Blogs';
+import NotFound from './Components/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
 
 
         {/* <Route path="/" element={ } /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
 
