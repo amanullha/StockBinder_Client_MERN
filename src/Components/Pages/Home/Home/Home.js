@@ -8,8 +8,11 @@ import Spreadsheets from '../Spreadsheets/Spreadsheets';
 
 
 const Home = () => {
+
+
+
     return (
-        <div className='scroll-smooth	'>
+        <div className='scrollSmooth	'>
             <ReactSlider />
             <Phones
                 fromCall="home" />
